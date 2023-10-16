@@ -60,6 +60,7 @@ export const useStyles = createUseStyles({
       borderRadius: 8,
       lineHeight: 1.3,
       marginTop: 15,
-      textAlign: "justify"
+      textAlign: "justify",
+      wordBreak: "break-word"
     }
 });
