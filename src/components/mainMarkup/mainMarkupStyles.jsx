@@ -35,9 +35,6 @@ export const useStyles = createUseStyles({
     logoLink: {
       textDecoration: "none",
       color: "#000",
-      "&:hover": {
-        color: "#ff9254"
-      },
     },
     logoImage: {
       transform: "translate(-4px, 4px)",
