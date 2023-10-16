@@ -10,9 +10,11 @@ export const MainMarkup = () => {
   return (
     <div className={classes.container}>
       <header className={classes.header}>
-        <div className={classes.logo}>
-        M<img src={Logo} alt="Logo" className={classes.logoImage} width={56}/>vies
-        </div>
+        <NavLink to="/" end className={classes.logoLink}>
+          <div className={classes.logo}>
+            M<img src={Logo} alt="Logo" className={classes.logoImage} width={56}/>vies
+          </div>
+        </NavLink>
         <nav className={classes.linksWrap}>
           <NavLink to="/" end className={classes.link}>
             Home
