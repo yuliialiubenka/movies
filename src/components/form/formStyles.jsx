@@ -21,7 +21,11 @@ export const useStyles = createUseStyles({
       fontWeight: 600,
       fontSize: 20,
       outline: "none",
-    
+
+      "@media screen and (max-width: 480px)": {
+        width: "calc(100% - 48px)",
+      },
+
       "&:hover, &:focus": {
         color: "#000",
         border: "3px solid #ff9254",

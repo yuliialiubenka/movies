@@ -89,6 +89,7 @@ export const useStyles = createUseStyles({
   },
   infoListItem: {
     "& a": {
+      fontFamily: "'Noto Sans Symbols 2', sans-serif",
       fontSize: 16,
       background: "#ffe454b0",
       padding: "2px 6px",
