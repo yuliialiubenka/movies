@@ -6,7 +6,11 @@ export const useStyles = createUseStyles({
       alignItems: "center",
       justifyContent: "center",
       marginTop: "-82px",
-      marginBottom: 18
+      marginBottom: 18,
+
+      "@media screen and (max-width: 1024px)": {
+        marginTop: 0,
+      }
     },
     input: {
       padding: "6px 12px",

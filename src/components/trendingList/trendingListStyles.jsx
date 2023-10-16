@@ -21,9 +21,20 @@ export const useStyles = createUseStyles({
         width: "calc((100% - 4 * 15px) / 5)",
       },
 
+      "@media screen and (max-width: 768px)": {
+        width: "calc((100% - 15px) / 2)",
+      },
+
       "& a": {
         textDecoration: "none",
         color: "#000",
+
+        "@media screen and (max-width: 768px)": {
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "100%",
+        },
       },
 
       "&:hover": {
@@ -46,21 +57,45 @@ export const useStyles = createUseStyles({
 
       "&:hover": {
         opacity: 1,
-      }
+      },
+
+      "@media screen and (max-width: 768px)": {
+        position: "static",
+        opacity: 1,
+        height: "auto",
+        borderRadius: "0 0 8px 8px",
+        flexGrow: "1",
+        background: "linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)",
+        textAlign: "center",
+        justifyContent: "center",
+        minHeight: 50
+      },
     },
 
     filmCardInfo: {
       display: "flex",
-      justifyContent: "space-between"
+      justifyContent: "space-between",
+
+      "@media screen and (max-width: 768px)": {
+        display: "none"
+      },
     },
     filmCardImage: {
       width: "100%",
       height: "100%",
       borderRadius: 8,
       objectFit: "cover",
+
+      "@media screen and (max-width: 768px)": {
+        borderRadius: "8px 8px 0 0",
+      },
     },
     filmCardTitle: {
       textDecoration: "none",
       marginBottom: 8,
+
+      "@media screen and (max-width: 768px)": {
+        marginBottom: 0,
+      },
     }
 });

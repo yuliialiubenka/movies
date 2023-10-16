@@ -4,12 +4,21 @@ export const useStyles = createUseStyles({
   wrapper: {
     display: "flex",
     marginTop: 35,
-    gap: 15
+    gap: 15,
+
+    "@media screen and (max-width: 768px)": {
+      marginTop: 20,
+      flexDirection: "column"
+    }
   },
   image: {
     borderRadius: 8,
     boxShadow: "0px 4px 10px 0px rgba(9, 9, 9, 0.61)",
-    objectFit: "cover"
+    objectFit: "cover",
+
+    "@media screen and (max-width: 768px)": {
+      width: "100%"
+    }
   },
   infoContainer: {
     display: "flex",
@@ -54,6 +63,10 @@ export const useStyles = createUseStyles({
     padding: 0,
     listStyleType: "none",
 
+    "@media screen and (max-width: 768px)": {
+      gap: 6
+    },
+
     "& li": {
       fontSize: 16,
       background: "#ffe454b0",
@@ -69,6 +82,10 @@ export const useStyles = createUseStyles({
     margin: 0,
     padding: 0,
     listStyleType: "none",
+
+    "@media screen and (max-width: 768px)": {
+      gap: 6
+    },
   },
   infoListItem: {
     "& a": {
@@ -92,7 +109,9 @@ export const useStyles = createUseStyles({
     marginTop: "-82px",
     marginLeft: "calc(100% - 230px)",
 
-    "&:hover": {
+    "@media screen and (max-width: 768px)": {
+      marginTop: "-67px",
+      marginLeft: "calc(100% - 176px)",
     }
   },
   button: {

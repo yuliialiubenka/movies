@@ -25,6 +25,7 @@ export const useStyles = createUseStyles({
       display: "flex",
       gap: 15,
       alignItems: "flex-start",
+      position: "relative"
     },
     listItemInfo: {
       padding: 15,
@@ -37,9 +38,19 @@ export const useStyles = createUseStyles({
       background: "#fff",
       padding: 6,
       borderRadius: 8,
+
+      "@media screen and (max-width: 768px)": {
+        position: "absolute",
+        width: 60,
+        left: 15,
+        top: 15
+      }
     },
     reviewAuthor: {
-
+      "@media screen and (max-width: 768px)": {
+        marginLeft: 70,
+        marginTop: 10,
+      }
     },
     reviewContent: {
       padding: 10,

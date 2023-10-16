@@ -27,9 +27,18 @@ export const useStyles = createUseStyles({
       fontSize: 64,
       lineHeight: 0.8,
       transform: "translate(0, -3px)",
+
+      "@media screen and (max-width: 768px)": {
+        fontSize: 30,
+      }
     },
     logoImage: {
       transform: "translate(-4px, 4px)",
+
+      "@media screen and (max-width: 768px)": {
+        width: 26,
+        transform: "translate(-1px, 2px)",
+      }
     },
     linksWrap: {
       display: "flex",
@@ -37,6 +46,10 @@ export const useStyles = createUseStyles({
       gap: 20,
       paddingRight: 8,
 
+      "@media screen and (max-width: 768px)": {
+        gap: 10,
+        paddingRight: 0,
+      }
     },
     link: {
       display: "inline-block",
@@ -51,6 +64,10 @@ export const useStyles = createUseStyles({
 
       "&.active": {
         color: "#ff9254"
+      },
+
+      "@media screen and (max-width: 768px)": {
+        fontSize: 18,
       }
     }
 });

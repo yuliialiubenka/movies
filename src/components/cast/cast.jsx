@@ -46,8 +46,10 @@ const Cast = () => {
               }
               alt={original_name}
             />
-            <p className={classes.name}>{name}</p>
-            <p className={classes.character}>{character}</p>
+            <div className={classes.listItemInfo}>
+              <p className={classes.name}>{name}</p>
+              <p className={classes.character}>{character}</p>
+            </div>
           </li>
         ))}
       </ul>
