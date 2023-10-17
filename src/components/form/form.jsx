@@ -3,20 +3,18 @@ import PropTypes from 'prop-types';
 import { useStyles } from './formStyles';
 import Icon from '../../images/search.svg';
 
-const Form = ({ searchMovies }) => {
+const Form = ({ onSubmit }) => {
   const classes = useStyles(); 
   const [query, setQuery] = useState('');
-  const searchQuery = query.toLowerCase();
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    searchMovies(searchQuery);
-    setQuery(query);
-    console.log(searchQuery);
+    onSubmit(query.toLowerCase());
+    setQuery('');
   };
 
   return (
@@ -38,7 +36,7 @@ const Form = ({ searchMovies }) => {
 };
 
 Form.propTypes = {
-  searchMovies: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default Form;
