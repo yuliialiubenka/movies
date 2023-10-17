@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from 'api/api';
 import Loader from 'components/loader/loader';
@@ -11,6 +11,7 @@ const MovieDetails = () => {
   const [movieInfo, setMovieInfo] = useState(null);
   const [loading, setLoading] = useState(false);
   const location = useLocation();
+  const backLinkRef = useRef(location.state?.from ?? '/movies');
 
   useEffect(() => {
     const fetchMovieDetailsFilms = () => {
@@ -48,12 +49,12 @@ const MovieDetails = () => {
 
   return (
     <>
-      <Link to={location.state?.from ?? '/'} className={classes.link}>
+      <Link to={backLinkRef.current} className={classes.link}>
         <button type="button" className={classes.button}>
           <img
-              width={42}
-              src={Icon}
-              alt={"Go back"}
+            width={42}
+            src={Icon}
+            alt={"Go back"}
           />
         </button>
       </Link>

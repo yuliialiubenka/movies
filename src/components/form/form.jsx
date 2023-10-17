@@ -6,6 +6,7 @@ import Icon from '../../images/search.svg';
 const Form = ({ searchMovies }) => {
   const classes = useStyles(); 
   const [query, setQuery] = useState('');
+  const searchQuery = query.toLowerCase();
 
   const handleInputChange = event => {
     setQuery(event.target.value);
@@ -13,7 +14,9 @@ const Form = ({ searchMovies }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    searchMovies(query.toLowerCase());
+    searchMovies(searchQuery);
+    setQuery(query);
+    console.log(searchQuery);
   };
 
   return (

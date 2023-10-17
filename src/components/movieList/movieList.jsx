@@ -1,9 +1,9 @@
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useStyles } from './trendingListStyles';
+import { useStyles } from './movieListStyles';
 
-const TrendingList = ({ films }) => {
+const MovieList = ({ films }) => {
   const location = useLocation();
   const classes = useStyles();
   return (
@@ -36,7 +36,7 @@ const TrendingList = ({ films }) => {
   );
 };
 
-TrendingList.propTypes = {
+MovieList.propTypes = {
   films: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -45,4 +45,4 @@ TrendingList.propTypes = {
   ),
 };
 
-export default TrendingList;
+export default MovieList;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import TrendingList from 'components/trendingList/trendingList';
+import MovieList from 'components/movieList/movieList';
 import { fetchTrending } from 'api/api';
 import Loader from 'components/loader/loader';
 
@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <main>
       <h1>Trending today</h1>
-      <TrendingList films={films} />
+      <MovieList films={films} />
 
       {loading && <Loader />}
     </main>

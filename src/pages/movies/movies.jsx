@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Loader from 'components/loader/loader';
-import EditorList from 'components/trendingList/trendingList';
+import MovieList from 'components/movieList/movieList';
 import Form from 'components/form/form';
 import { fetchSearchByKeyword } from 'api/api';
 import EmptyBlock from '../../components/emptyBlock/emptyBlock';
@@ -34,7 +34,7 @@ const Movies = () => {
       <Form searchMovies={searchMovies} />
       {loading && <Loader />}
       {emptyBlock && <EmptyBlock />}
-      {searchFilms && <EditorList films={searchFilms} />}
+      {searchFilms && <MovieList films={searchFilms} />}
       {noMoviesBlock && <NoMoviesBlock />}
     </main>
   );
